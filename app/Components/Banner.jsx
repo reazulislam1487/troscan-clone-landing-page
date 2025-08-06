@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 export default function Banner() {
   return (
@@ -12,7 +12,7 @@ export default function Banner() {
           alt="Hero Background"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/30" />{' '}
+        <div className="absolute inset-0 bg-black/30" />{" "}
         {/* Optional overlay */}
       </div>
 
@@ -22,23 +22,21 @@ export default function Banner() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-white text-5xl md:text-7xl font-semibold leading-tight"
+          className="text-white text-5xl md:text-8xl font-semibold leading-tight"
         >
           Timeless Comfort &<br /> Endless Luxury
         </motion.h1>
 
-        <div className="mt-8 flex space-x-4">
+        <div className="mt-3 flex space-x-4">
           <motion.a
-            whileHover={{ scale: 1.05 }}
             href="#vision"
-            className="bg-white text-[#693728] px-6 py-3 rounded-md font-medium shadow hover:bg-neutral-100"
+            className="bg-white text-[#693728] px-7 py-3 rounded-md font-bold shadow hover:bg-neutral-100"
           >
             Our Vision
           </motion.a>
           <motion.a
-            whileHover={{ scale: 1.05 }}
             href="#expertise"
-            className="border border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-[#693728] transition"
+            className="border border-white text-white px-7 py-3 rounded-md font-bold hover:bg-white hover:text-[#693728] transition"
           >
             Explore Expertise
           </motion.a>

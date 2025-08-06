@@ -1,14 +1,14 @@
-'use client'
-import React, { useState } from 'react';
-import { X, Menu } from 'lucide-react';
-import { motion} from 'framer-motion';
+"use client";
+import React, { useState } from "react";
+import { X, Menu } from "lucide-react";
+import { motion } from "framer-motion";
 const Header = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   const menuItems = [
-    { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'News', href: '#news' },
+    { name: "About", href: "#about" },
+    { name: "Projects", href: "#projects" },
+    { name: "News", href: "#news" },
   ];
 
   return (
@@ -18,21 +18,21 @@ const Header = () => {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="fixed top-8 left-1/2 transform -translate-x-1/2 z-500 w-[90%] max-w-[700px] animate-fade-in"
-        style={{ animationDelay: '0.2s' }}
+        className="fixed top-5 left-1/2 transform -translate-x-1/2 z-500 w-[90%] max-w-[700px] animate-fade-in"
+        style={{ animationDelay: "0.2s" }}
       >
-        <nav className="flex items-center justify-between px-6 py-3 bg-[#F8EDE3] text-[#8D493A] rounded-md shadow-lg backdrop-blur-sm">
-          <h1 className="font-bold font-[Archivo] text-xl tracking-wide">
+        <nav className="flex items-center justify-between px-1 py-1 bg-[#F8EDE3] text-[#8D493A] rounded-md shadow-lg backdrop-blur-sm">
+          <h1 className="font-extrabold font-[Archivo] text-xl ml-4 tracking-wide">
             Troscán
           </h1>
 
           {/* Desktop Menu */}
           <ul className="hidden md:flex gap-8 font-semibold items-center">
-            {menuItems.map(item => (
+            {menuItems.map((item) => (
               <li key={item.name}>
                 <a
                   href={item.href}
-                  className="hover:text-[#71372a] transition-colors duration-200 cursor-pointer"
+                  className="hover:text-[#71372a]s transition-colors duration-200 cursor-pointer"
                 >
                   {item.name}
                 </a>
@@ -41,7 +41,7 @@ const Header = () => {
           </ul>
 
           <a href="#contact" className="hidden md:inline-block">
-            <button className="bg-[#8D493A] text-[#F8EDE3] font-[Archivo] rounded-md text-md font-bold px-6 py-2 hover:bg-[#71372a] transition-all duration-200 transform hover:scale-105 shadow-md">
+            <button className="bg-[#71372a] text-[#F8EDE3] font-[Archivo] rounded-md text-md font-bold px-7 py-[14px] hover:bg-[#8D493A] transition-all duration-200 transform cursor-pointer">
               Contact Us
             </button>
           </a>
@@ -61,8 +61,8 @@ const Header = () => {
         <div
           className="fixed inset-0 z-240 bg-white max-h-1/3 p-6 animate-fade-in"
           style={{
-            animation: 'fadeIn 0.3s ease-out',
-            backdropFilter: 'blur(8px)',
+            animation: "fadeIn 0.3s ease-out",
+            backdropFilter: "blur(8px)",
           }}
         >
           {/* Close button */}
@@ -103,7 +103,7 @@ const Header = () => {
           {/* Contact Button */}
           <div
             className="mt-6 flex justify-center"
-            style={{ animation: 'slideInUp 0.4s ease-out 0.5s both' }}
+            style={{ animation: "slideInUp 0.4s ease-out 0.5s both" }}
           >
             <a href="#contact">
               <button

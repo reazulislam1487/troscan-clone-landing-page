@@ -1,7 +1,7 @@
-'use client';
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import Image from 'next/image';
+"use client";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 const About = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -14,7 +14,7 @@ const About = () => {
             className="space-y-8"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <motion.div
               className="flex items-center space-x-2"
@@ -23,7 +23,7 @@ const About = () => {
               transition={{ delay: 0.2, duration: 0.6 }}
             >
               <div className="w-2 h-2 bg-[#8D493A] rounded-full"></div>
-              <span className="text-[#8D493A] font-medium text-sm tracking-wide uppercase">
+              <span className="text-[#8D493A] font-medium text-sm tracking-wide">
                 About us
               </span>
             </motion.div>
@@ -67,7 +67,7 @@ const About = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.6 }}
             >
-              <button className="bg-[#8D493A] hover:bg-[#a25c5c] text-[#F8EDE3] px-6 py-2.5 rounded-md font-medium text-md transition-all duration-300 shadow-lg hover:shadow-xl">
+              <button className="bg-[#8D493A] hover:bg-[#a25c5c] text-[#F8EDE3] px-7 py-4 rounded-md font-medium text-md transition-all duration-300 shadow-lg hover:shadow-xl">
                 More About Us
               </button>
             </motion.div>
@@ -77,20 +77,20 @@ const About = () => {
             className="relative"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
           >
             {/* Main Image Container */}
             <motion.div
-              className="relative overflow-hidden rounded-md w-full h-[600px] cursor-pointer shadow-lg"
+              className="relative overflow-hidden rounded-md w-full h-[485px] cursor-pointer shadow-lg"
               onHoverStart={() => setIsHovered(true)}
               onHoverEnd={() => setIsHovered(false)}
             >
               <motion.div
                 className="w-full h-full"
                 animate={{ scale: isHovered ? 1.05 : 1 }}
-                transition={{ duration: 0.6, ease: 'easeOut' }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
               >
                 <Image
                   src="/images/about-image.png"
