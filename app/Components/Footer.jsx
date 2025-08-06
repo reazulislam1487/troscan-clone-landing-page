@@ -2,86 +2,125 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer style={styles.footer}>
+    <footer className="bg-[#8d493a] min-h-screen flex flex-col justify-center px-5 text-white font-sans">
       {/* Brand */}
-      <div style={styles.brand}>
-        <h1 style={styles.brandTitle}>Troscán</h1>
+      <div className="text-center my-20">
+        <h1 className=" text-xl font-bold">Troscán</h1>
       </div>
 
       {/* Navigation Columns */}
-      <div style={styles.navContainer}>
-        <div style={styles.navColumn}>
-          <h3 style={styles.navHeading}>Sitemap</h3>
-          <ul style={styles.list}>
+      <div className="flex justify-center flex-wrap gap-10 md:gap-[100px] mb-18 max-w-3xl mx-auto">
+        {/* Column 1 */}
+        <div className="text-center">
+          <h3 className="text-[#e8d4d0] font-normal mb-4">Sitemap</h3>
+          <ul className="">
             <li>
-              <a href="#about" style={styles.link}>
+              <a
+                href="#about"
+                className="text-white text-xl md:text-3xl font-semibold hover:text-[#e8d4d0]"
+              >
                 About
               </a>
             </li>
             <li>
-              <a href="#projects" style={styles.link}>
+              <a
+                href="#projects"
+                className="text-white text-xl md:text-3xl font-semibold hover:text-[#e8d4d0]"
+              >
                 Projects
               </a>
             </li>
             <li>
-              <a href="#news" style={styles.link}>
+              <a
+                href="#news"
+                className="text-white text-xl md:text-3xl font-semibold hover:text-[#e8d4d0]"
+              >
                 News
               </a>
             </li>
             <li>
-              <a href="#contact" style={styles.link}>
+              <a
+                href="#contact"
+                className="text-white text-xl md:text-3xl font-semibold hover:text-[#e8d4d0]"
+              >
                 Contact
               </a>
             </li>
           </ul>
         </div>
 
-        <div style={styles.navColumn}>
-          <h3 style={styles.navHeading}>Socials</h3>
-          <ul style={styles.list}>
+        {/* Column 2 */}
+        <div className="text-center">
+          <h3 className="text-[#e8d4d0] font-normal mb-4">Socials</h3>
+          <ul className="">
             <li>
-              <a href="#facebook" style={styles.link}>
+              <a
+                href="#facebook"
+                className="text-white text-xl md:text-3xl font-semibold hover:text-[#e8d4d0]"
+              >
                 Facebook
               </a>
             </li>
             <li>
-              <a href="#instagram" style={styles.link}>
+              <a
+                href="#instagram"
+                className="text-white text-xl md:text-3xl font-semibold hover:text-[#e8d4d0]"
+              >
                 Instagram
               </a>
             </li>
             <li>
-              <a href="#linkedin" style={styles.link}>
+              <a
+                href="#linkedin"
+                className="text-white text-xl md:text-3xl font-semibold hover:text-[#e8d4d0]"
+              >
                 LinkedIn
               </a>
             </li>
             <li>
-              <a href="#twitter" style={styles.link}>
+              <a
+                href="#twitter"
+                className="text-white text-xl md:text-3xl font-semibold hover:text-[#e8d4d0]"
+              >
                 Twitter
               </a>
             </li>
           </ul>
         </div>
 
-        <div style={styles.navColumn}>
-          <h3 style={styles.navHeading}>More</h3>
-          <ul style={styles.list}>
+        {/* Column 3 */}
+        <div className="text-center">
+          <h3 className="text-[#e8d4d0] font-normal mb-4">More</h3>
+          <ul className="">
             <li>
-              <a href="#license" style={styles.link}>
+              <a
+                href="#license"
+                className="text-white text-xl md:text-3xl font-semibold hover:text-[#e8d4d0]"
+              >
                 License
               </a>
             </li>
             <li>
-              <a href="#grainient" style={styles.link}>
+              <a
+                href="#grainient"
+                className="text-white text-xl md:text-3xl font-semibold hover:text-[#e8d4d0]"
+              >
                 Grainient
               </a>
             </li>
             <li>
-              <a href="#inspirux" style={styles.link}>
+              <a
+                href="#inspirux"
+                className="text-white text-xl md:text-3xl font-semibold hover:text-[#e8d4d0]"
+              >
                 Inspirux
               </a>
             </li>
             <li>
-              <a href="#store" style={styles.link}>
+              <a
+                href="#store"
+                className="text-white text-xl md:text-3xl font-semibold hover:text-[#e8d4d0]"
+              >
                 Store
               </a>
             </li>
@@ -89,89 +128,14 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom */}
-      <div style={styles.footerBottom}>
-        <div style={styles.copyright}>© 2025, All rights reserved</div>
-        <div style={styles.madeInFramer}>🎨 Made in Framer</div>
+      {/* Footer Bottom */}
+      <div className="border-t border-white/15 px-6 py-8 flex flex-col md:flex-row justify-center items-center text-center">
+        <h1 className="text-sm text-center text-white/70 ">
+          © 2025, All rights reserved
+        </h1>
       </div>
     </footer>
   );
-};
-
-const styles = {
-  footer: {
-    backgroundColor: "#a8665a",
-    minHeight: "100vh",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    padding: "40px 20px",
-    fontFamily:
-      "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-    color: "white",
-  },
-  brand: {
-    textAlign: "center",
-    marginBottom: 90,
-  },
-  brandTitle: {
-    fontSize: 48,
-    fontWeight: 300,
-    color: "white",
-  },
-  navContainer: {
-    display: "flex",
-    justifyContent: "center",
-    gap: 140,
-    marginBottom: 120,
-    maxWidth: 800,
-    marginLeft: "auto",
-    marginRight: "auto",
-    flexWrap: "wrap",
-  },
-  navColumn: {
-    textAlign: "center",
-  },
-  navHeading: {
-    fontSize: 18,
-    fontWeight: 400,
-    color: "#e8d4d0",
-    marginBottom: 28,
-  },
-  list: {
-    listStyle: "none",
-    padding: 0,
-  },
-  link: {
-    display: "block",
-    marginBottom: 16,
-    color: "white",
-    textDecoration: "none",
-    fontSize: 32,
-    fontWeight: 300,
-    lineHeight: 1.2,
-  },
-  footerBottom: {
-    borderTop: "1px solid rgba(255, 255, 255, 0.15)",
-    padding: "32px 60px",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    flexWrap: "wrap",
-  },
-  copyright: {
-    fontSize: 16,
-    fontWeight: 300,
-    color: "rgba(255, 255, 255, 0.7)",
-  },
-  madeInFramer: {
-    background: "rgba(0, 0, 0, 0.15)",
-    padding: "10px 20px",
-    borderRadius: 25,
-    fontSize: 14,
-    fontWeight: 400,
-    color: "white",
-  },
 };
 
 export default Footer;

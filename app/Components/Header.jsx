@@ -41,14 +41,14 @@ const Header = () => {
           </ul>
 
           <a href="#contact" className="hidden md:inline-block">
-            <button className="bg-[#71372a] text-[#F8EDE3] font-[Archivo] rounded-md text-md font-bold px-7 py-[14px] hover:bg-[#8D493A] transition-all duration-200 transform cursor-pointer">
+            <button className="bg-[#8d493a] text-[#F8EDE3] font-[Archivo] rounded-md text-md font-bold px-7 py-[14px] hover:bg-[#8D493A] transition-all duration-200 transform cursor-pointer">
               Contact Us
             </button>
           </a>
 
           {/* Mobile Hamburger Icon */}
           <button
-            className="md:hidden bg-[#8D493A] text-[#F8EDE3] p-2 rounded hover:bg-[#71372a] transition-colors duration-200"
+            className="md:hidden bg-[#8D493A] text-[#F8EDE3] p-2 rounded hover:bg-[#8d493a] transition-colors duration-200"
             onClick={() => setIsMobileOpen(true)}
           >
             <Menu size={20} />
