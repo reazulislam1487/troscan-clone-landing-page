@@ -33,7 +33,7 @@ export default function Expertise() {
 
   return (
     <div className="">
-      <div className="max-w-9xl mx-auto px-4 sm:px-8 py-16 sm:py-46">
+      <div className="max-w-9xl mx-auto py-16 px-4 md:py-46 md:px-12 lg:px-16">
         {/* Header */}
         <div className="mb-10 sm:mb-16">
           <motion.div
@@ -43,19 +43,21 @@ export default function Expertise() {
             transition={{ delay: 0.2, duration: 0.6 }}
           >
             {/* Small title */}
-            <div className="flex  items-center justify-start space-x-2 mb-4">
-              <span className="w-2 h-2 bg-[#8d493a] rounded-full"></span>
-              <span className="text-sm font-medium text-[#8d493a]">
-                Our Expertise
-              </span>
-            </div>
+            <div className="flex flex-col  w-full  space-x-2 mb-4">
+              <div className="flex items-center justify-start space-x-2 mb-4">
+                <p className="w-2 h-2 bg-[#8d493a] rounded-full"></p>
+                <p className="text-sm font-medium text-[#8d493a]">
+                  Our Expertise
+                </p>
+              </div>
 
-            {/* Main heading */}
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-normal leading-tight text-[#8d493a]">
-              Selecting the ideal <br />
-              elements to elevate <br />
-              your space
-            </h1>
+              {/* Main heading */}
+              <h1 className="text-3xl sm:text-4xl md:text-6xl font-normal leading-tight text-[#8d493a]">
+                Selecting the ideal <br />
+                elements to elevate <br />
+                your space
+              </h1>
+            </div>
           </motion.div>
         </div>
 

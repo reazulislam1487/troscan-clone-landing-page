@@ -30,7 +30,7 @@ const cardVariants = {
 
 export default function News() {
   return (
-    <section className="py-16 px-4 md:py-64 md:px-12 lg:px-16 bg-gradient-to-br from-orange-50 to-amber-50">
+    <section className="py-16 px-4 md:py-64 md:px-12 lg:px-16 ">
       {/* Header & Button */}
       <motion.div
         className="max-w-9xl mx-auto mb-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
@@ -58,7 +58,7 @@ export default function News() {
           </motion.h2>
         </motion.div>
 
-        <button className=" px-6 py-3 rounded-md text-white bg-[#7a3f2e] font-medium shadow-lg cursor-pointer hover:bg-amber-800">
+        <button className=" px-6 py-3 rounded-md text-white md:mt-23 bg-[#7a3f2e] font-medium shadow-lg cursor-pointer hover:bg-amber-800">
           View All News
         </button>
       </motion.div>
@@ -79,8 +79,8 @@ export default function News() {
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-6 shadow-lg group-hover:shadow-xl transition-shadow duration-300">
               <motion.div
                 className="relative w-full h-full"
-                whileHover={{ scale: 1.05 }} // Zoom effect (5% larger)
-                transition={{ duration: 0.4, ease: "easeOut" }} // Smooth animation
+                whileHover={{ scale: 1.05 }} //
+                transition={{ duration: 0.4, ease: "easeOut" }}
               >
                 <Image
                   src={`/news/image0${id}.png`}
@@ -90,7 +90,7 @@ export default function News() {
                   sizes="(max-width: 768px) 100vw, 33vw"
                   priority={id === 1}
                 />
-                {/* Optional: Overlay effect (now nested inside motion.div to scale with the image) */}
+
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
               </motion.div>
             </div>

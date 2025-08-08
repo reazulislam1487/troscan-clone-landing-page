@@ -21,7 +21,7 @@ const About = () => {
       ref={sectionRef}
       className="min-h-screen bg-[#F8EDE3] overflow-hidden font-[archivo]"
     >
-      <div className="max-w-9xl mx-auto px-4 py-14 lg:pt-24">
+      <div className="max-w-9xl mx-auto px-4 py-16 md:pt-56 md:px-12 lg:px-16">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
           <motion.div
