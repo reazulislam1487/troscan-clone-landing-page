@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#8d493a] flex flex-col justify-center px-5 text-white font-sans">
+    <footer className="bg-[#8d493a] flex flex-col justify-center px-5 text-white font-[archivo]">
       {/* Brand */}
       <div className="text-center my-20">
         <h1 className=" text-xl font-bold">Troscán</h1>

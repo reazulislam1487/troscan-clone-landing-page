@@ -30,7 +30,7 @@ const cardVariants = {
 
 export default function News() {
   return (
-    <section className="py-16 px-4 md:py-64 md:px-12 lg:px-16 ">
+    <section className="py-16 px-4 md:py-64 md:px-12 lg:px-16 font-[archivo] ">
       {/* Header & Button */}
       <motion.div
         className="max-w-9xl mx-auto mb-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6"

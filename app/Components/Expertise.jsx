@@ -33,7 +33,7 @@ export default function Expertise() {
 
   return (
     <div className="">
-      <div className="max-w-9xl mx-auto py-16 px-4 md:py-46 md:px-12 lg:px-16">
+      <div className="max-w-9xl mx-auto py-16 px-4 md:py-46 md:px-12 lg:px-16 font-[archivo]">
         {/* Header */}
         <div className="mb-10 sm:mb-16">
           <motion.div

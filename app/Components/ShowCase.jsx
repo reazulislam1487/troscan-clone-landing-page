@@ -62,7 +62,7 @@ export default function Products() {
   const textY = useTransform(scrollYProgress, [0.2, 0.35], [10, 0]);
 
   return (
-    <section ref={ref} className="relative h-[250vh] py-50">
+    <section ref={ref} className="relative h-[250vh] py-50 font-[archivo]">
       {/* Sticky container with overflow-x-hidden to prevent horizontal scroll */}
       <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-x-hidden">
         <div className="relative w-full h-full flex items-center justify-center">

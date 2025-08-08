@@ -11,7 +11,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed md:w-7/12 mx-auto left-0 right-0 z-50 px-4 py-2  w-full flex flex-col items-center">
+    <nav className="fixed md:w-7/12 mx-auto left-0 right-0 z-50 px-4 py-2 font-[archivo] w-full flex flex-col items-center">
       <motion.div
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 20, opacity: 1 }}

@@ -14,7 +14,10 @@ export default function GetInTouch() {
   const boxY = useTransform(scrollYProgress, [0, 1], [300, 0]);
 
   return (
-    <section ref={containerRef} className="relative h-[250vh] w-full">
+    <section
+      ref={containerRef}
+      className="relative h-[250vh] w-full font-[archivo]"
+    >
       {/* Sticky full-height background image */}
       <div className="sticky top-0 h-screen w-full z-0">
         <Image
@@ -35,7 +38,7 @@ export default function GetInTouch() {
             Ready to reimagine your space? Connect with us at Troscán to bring
             your vision to life with our expertise in design and decoration.
           </p>
-          <button className="bg-[#8d493a] hover:bg-amber-800 transition-all duration-400 transform text-white font-semibold text-sm sm:text-md px-6 sm:px-7 py-3 sm:py-4 cursor-pointer rounded-md">
+          <button className="bg-[#8d493a] hover:bg-amber-800 transition-all duration-400 transform text-white font-semibold text-sm sm:text-xl px-6 sm:px-6 py-3 sm:py-3.5 cursor-pointer rounded-md">
             Get in Touch
           </button>
         </div>
