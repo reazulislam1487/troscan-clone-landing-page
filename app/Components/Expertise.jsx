@@ -37,7 +37,7 @@ export default function Expertise() {
         {/* Header */}
         <div className="mb-10 sm:mb-16">
           <motion.div
-            className="flex flex-col items-start text-left md:items-center md:pl-150  text-amber-900"
+            className="flex flex-col items-start text-left md:items-center lg:pl-150  text-amber-900"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
