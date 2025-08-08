@@ -80,7 +80,7 @@ const About = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.6 }}
             >
-              <button className="bg-[#8D493A] hover:bg-amber-800 text-[#F8EDE3] px-7 py-4 rounded-md font-medium text-md transition-all duration-300 shadow-lg hover:shadow-xl">
+              <button className="bg-[#8D493A] hover:bg-amber-800 cursor-pointer text-[#F8EDE3] px-7 py-4 rounded-md font-medium text-md transition-all duration-300 shadow-lg hover:shadow-xl">
                 More About Us
               </button>
             </motion.div>

@@ -35,7 +35,7 @@ export default function GetInTouch() {
             Ready to reimagine your space? Connect with us at Troscán to bring
             your vision to life with our expertise in design and decoration.
           </p>
-          <button className="bg-[#8d493a] hover:bg-amber-800 transition-all duration-400 transform text-white font-semibold text-sm sm:text-md px-4 sm:px-6 py-2 sm:py-3 cursor-pointer rounded-md">
+          <button className="bg-[#8d493a] hover:bg-amber-800 transition-all duration-400 transform text-white font-semibold text-sm sm:text-md px-6 sm:px-7 py-3 sm:py-4 cursor-pointer rounded-md">
             Get in Touch
           </button>
         </div>

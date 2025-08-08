@@ -1,4 +1,4 @@
-import { Archivo, Inter } from "next/font/google";
+import { Archivo } from "next/font/google";
 import "./globals.css";
 
 const archivo = Archivo({

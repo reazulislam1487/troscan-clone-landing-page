@@ -35,7 +35,7 @@ export default function Banner() {
         >
           <motion.a
             href="#vision"
-            className="bg-white text-[#693728] px-7 py-3 rounded-md font-bold shadow hover:bg-neutral-100 w-full sm:w-auto text-center"
+            className="bg-white text-[#693728] px-7 py-3 rounded-md font-bold shadow hover:bg-[#F8EDE3] w-full sm:w-auto text-center"
           >
             Our Vision
           </motion.a>

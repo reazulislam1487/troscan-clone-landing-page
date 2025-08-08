@@ -129,7 +129,7 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="border-t border-white/40 px-4 md:px-12 lg:px-16 flex flex-col md:flex-row justify-center items-center text-center">
+      <div className="border-t border-white/40 px-4 md:px-12 lg:px-16 py-8 flex flex-col md:flex-row justify-center items-center text-center">
         <h1 className="text-sm text-center text-white/70 ">
           © 2025, All rights reserved
         </h1>
