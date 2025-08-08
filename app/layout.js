@@ -1,16 +1,9 @@
 import { Archivo, Inter } from "next/font/google";
 import "./globals.css";
-import Header from "./Components/Header";
-import Banner from "./Components/Banner";
 
 const archivo = Archivo({
-  weight: ["200", "300", "400", "500", "600", "700", "800"],
+  variable: "--font-archivo",
   subsets: ["latin"],
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700", "800"],
 });
 
 export const metadata = {
@@ -22,9 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${archivo.className} antialiased`}>
-        <Banner />
-        <Header />
+      <body className={`${archivo.variable} antialiased`}>
         <main>{children}</main>
       </body>
     </html>

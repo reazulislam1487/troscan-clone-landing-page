@@ -2,14 +2,14 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#8d493a] min-h-screen flex flex-col justify-center px-5 text-white font-sans">
+    <footer className="bg-[#8d493a] flex flex-col justify-center px-5 text-white font-sans">
       {/* Brand */}
       <div className="text-center my-20">
         <h1 className=" text-xl font-bold">Troscán</h1>
       </div>
 
       {/* Navigation Columns */}
-      <div className="flex justify-center flex-wrap gap-10 md:gap-[100px] mb-18 max-w-3xl mx-auto">
+      <div className="flex justify-center flex-col sm:flex-row flex-wrap gap-10 md:gap-[100px] mb-18 max-w-3xl mx-auto">
         {/* Column 1 */}
         <div className="text-center">
           <h3 className="text-[#e8d4d0] font-normal mb-4">Sitemap</h3>
@@ -129,7 +129,7 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="border-t border-white/15 px-6 py-8 flex flex-col md:flex-row justify-center items-center text-center">
+      <div className="border-t border-white/40  px-6 py-8 flex flex-col md:flex-row justify-center items-center text-center">
         <h1 className="text-sm text-center text-white/70 ">
           © 2025, All rights reserved
         </h1>

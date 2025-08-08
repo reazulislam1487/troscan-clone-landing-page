@@ -1,74 +1,133 @@
+"use client";
+
 import React from "react";
+import { motion } from "motion/react";
+import Image from "next/image";
 
-const articles = [
-  {
-    date: "February 5, 2022",
-    title: "The Art of Minimalist Interiors",
-    subtitle: "Less is More: Designing Spaces That Speak Simplicity",
-    image:
-      "https://framerusercontent.com/images/bZdh0mETTRfnrDNMinaVWCZqhqs.jpeg",
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.3,
+    },
   },
-  {
-    date: "February 22, 2022",
-    title: "Timeless Furniture Pieces Every Home Needs",
-    subtitle: "Building a Home That Never Goes Out of Style",
-    image:
-      "https://framerusercontent.com/images/HXD1LGGH4sdyu2AfKcILOBWjBM.jpeg",
-  },
-  {
-    date: "January 21, 2023",
-    title: "Psychology in Interior Design",
-    subtitle: "Shaping Emotions Through Thoughtful Color Choices",
-    image:
-      "https://framerusercontent.com/images/xzFrK8RnnKFFvFnsttyDo4BcCE.jpeg",
-  },
-];
+};
 
-const News = () => {
+const headerVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
+
+const buttonVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.3 } },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 60 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+};
+
+export default function News() {
   return (
-    <section id="news" className="py-20 px-5">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="flex justify-between  items-start mb-12">
-          <div>
-            <span className="text-sm text-[#9a4f3f]">• News</span>
-            <div>
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-[#9a4f3f] mt-2 leading-snug">
-                Stay Inspired with <br />
-                Interior Trends
-              </h2>
-            </div>
-          </div>
-          <a
-            href="#"
-            className="bg-[#8D493A] hover:bg-[#a25c5c] text-[#F8EDE3] px-7 py-4 rounded-md font-medium text-md transition-all duration-300 shadow-lg hover:shadow-xl"
+    <section className="py-16 px-4 md:py-64 md:px-12 lg:px-16 bg-gradient-to-br from-orange-50 to-amber-50">
+      {/* Header & Button */}
+      <motion.div
+        className="max-w-9xl mx-auto mb-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={containerVariants}
+      >
+        <motion.div variants={headerVariants}>
+          <motion.p
+            className="text-sm text-[#8d493a] mb-2 flex items-center"
+            variants={headerVariants}
           >
-            View All News
-          </a>
-        </div>
+            <span className="w-2 h-2 bg-[#7a3f2e] rounded-full mr-2"></span>
+            News
+          </motion.p>
+          <motion.h2
+            className="text-4xl md:text-5xl lg:text-6xl font-light leading-tight"
+            style={{ color: "#8d493a" }}
+            variants={headerVariants}
+          >
+            Stay Inspired with
+            <br />
+            Interior Trends
+          </motion.h2>
+        </motion.div>
 
-        {/* Grid */}
-        <div className="grid md:grid-cols-3 gap-3">
-          {articles.map((item, index) => (
-            <div key={index}>
-              <div className="rounded-xl overflow-hidden mb-4">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-[300px] object-cover"
+        <button className=" px-6 py-3 rounded-md text-white bg-[#7a3f2e] font-medium shadow-lg cursor-pointer hover:bg-amber-800">
+          View All News
+        </button>
+      </motion.div>
+
+      {/* Articles Grid */}
+      <div className="max-w-9xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+        {[1, 2, 3].map((id, index) => (
+          <motion.article
+            key={id}
+            className="group cursor-pointer"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={cardVariants}
+            transition={{ delay: 0.3 * index }}
+          >
+            {/* Image with zoom on hover only */}
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-6 shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+              <motion.div
+                className="relative w-full h-full"
+                whileHover={{ scale: 1.05 }} // Zoom effect (5% larger)
+                transition={{ duration: 0.4, ease: "easeOut" }} // Smooth animation
+              >
+                <Image
+                  src={`/news/image0${id}.png`}
+                  alt={`News ${id}`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  priority={id === 1}
                 />
-              </div>
-              <p className="text-sm text-[#9a4f3f] mb-1">• {item.date}</p>
-              <h3 className="text-xl font-medium text-[#9a4f3f] mb-1">
-                {item.title}
-              </h3>
-              <p className="text-sm text-[#9a4f3f]">{item.subtitle}</p>
+                {/* Optional: Overlay effect (now nested inside motion.div to scale with the image) */}
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+              </motion.div>
             </div>
-          ))}
-        </div>
+
+            {/* Content */}
+            <div className="space-y-3">
+              <p
+                className="text-sm flex items-center"
+                style={{ color: "#8d493a" }}
+              >
+                <span
+                  className="w-1.5 h-1.5 rounded-full mr-2"
+                  style={{ backgroundColor: "#8d493a" }}
+                ></span>
+                {id === 1 && "February 5, 2022"}
+                {id === 2 && "February 22, 2022"}
+                {id === 3 && "January 21, 2023"}
+              </p>
+              <h3
+                className="text-xl md:text-2xl font-light leading-tight group-hover:text-amber-700 transition-colors duration-300"
+                style={{ color: "#8d493a" }}
+              >
+                {id === 1 && "The Art of Minimalist Interiors"}
+                {id === 2 && "Timeless Furniture Pieces Every Home Needs"}
+                {id === 3 && "Psychology in Interior Design"}
+              </h3>
+              <p className="text-sm text-[#8d493a] leading-relaxed">
+                {id === 1 &&
+                  "Less is More: Designing Spaces That Speak Simplicity"}
+                {id === 2 && "Building a Home That Never Goes Out of Style"}
+                {id === 3 &&
+                  "Shaping Emotions Through Thoughtful Color Choices"}
+              </p>
+            </div>
+          </motion.article>
+        ))}
       </div>
     </section>
   );
-};
-
-export default News;
+}

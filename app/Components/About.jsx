@@ -1,15 +1,29 @@
 "use client";
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useState, useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 
 const About = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const sectionRef = useRef(null);
+
+  // Scroll progress tracking
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  // Zoom-out effect on scroll
+  const scale = useTransform(scrollYProgress, [0, 1], [1.3, 1]);
 
   return (
-    <section className="min-h-screen bg-[#F8EDE3] overflow-hidden py-14 font-[archivo] px-8">
-      <div className="container mx-auto px-6 py-14 lg:py-24">
+    <section
+      ref={sectionRef}
+      className="min-h-screen bg-[#F8EDE3] overflow-hidden font-[archivo]"
+    >
+      <div className="max-w-9xl mx-auto px-4 py-14 lg:pt-24">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left Content */}
           <motion.div
             className="space-y-8"
             initial={{ opacity: 0, x: -50 }}
@@ -29,7 +43,6 @@ const About = () => {
             </motion.div>
 
             <motion.div
-              className=""
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
@@ -67,12 +80,13 @@ const About = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.6 }}
             >
-              <button className="bg-[#8D493A] hover:bg-[#a25c5c] text-[#F8EDE3] px-7 py-4 rounded-md font-medium text-md transition-all duration-300 shadow-lg hover:shadow-xl">
+              <button className="bg-[#8D493A] hover:bg-amber-800 text-[#F8EDE3] px-7 py-4 rounded-md font-medium text-md transition-all duration-300 shadow-lg hover:shadow-xl">
                 More About Us
               </button>
             </motion.div>
           </motion.div>
 
+          {/* Right Image with Scroll Zoom Effect */}
           <motion.div
             className="relative"
             initial={{ opacity: 0, x: 50 }}
@@ -81,32 +95,21 @@ const About = () => {
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
           >
-            {/* Main Image Container */}
-            <motion.div
-              className="relative overflow-hidden rounded-md w-full h-[485px] cursor-pointer shadow-lg"
-              onHoverStart={() => setIsHovered(true)}
-              onHoverEnd={() => setIsHovered(false)}
-            >
+            <motion.div className="relative overflow-hidden rounded-md w-full h-[485px] cursor-pointer shadow-lg">
               <motion.div
                 className="w-full h-full"
-                animate={{ scale: isHovered ? 1.05 : 1 }}
+                style={{ scale }} // scroll-based zoom
+                animate={{ scale: isHovered ? 1.05 : undefined }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
               >
                 <Image
-                  src="/images/about-image.png"
+                  src="/about-image.png"
                   alt="About Section Image"
                   width={800}
                   height={600}
                   className="w-full h-full object-cover"
                 />
               </motion.div>
-
-              {/* Optional overlay */}
-              <motion.div
-                className="absolute inset-0 "
-                animate={{ opacity: isHovered ? 0.2 : 0 }}
-                transition={{ duration: 0.4 }}
-              />
             </motion.div>
           </motion.div>
         </div>
